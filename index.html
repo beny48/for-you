@@ -1,223 +1,153 @@
-<html>
+<!DOCTYPE html><html>
+
 <head>
-   <title>FROM BENY</title>
-   <style>* {
-   margin: 0;
-   padding: 0;
-   }
-   
-   body {
-   background-color: black;
-   }
-   
-   h1 {
-   margin-top: 5%;
-   font-family: 'Segoe UI';
-   font-size: 60px;
-   text-align: center;
-   color: white;
-   }
-   </style>
+<iframe src="https://www.youtube.com/embed/FLGCGc7sAUw?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+</audio>
+<title>Hacked by RAs_617</title>
+<link href="https://3.bp.blogspot.com/-eHof2Y2DEag/WEwLx-YUPSI/AAAAAAAAAUM/IevUMYniJasr4TpxSEAgv6qNCzufk0bWACLcB/s1600/Logomakr_5nQ0VR.png" rel="icon" type="image/x-iconss">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Haiii Nopiiiiiii" />
+    <meta name="description" content="Haiii Nopiiiiiii" />
+    <meta name="author" content="Haiii Nopiiiiiii">
+
+<!-- style -->
+    <link rel="stylesheet" href="http://444.com.tr/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="http://444.com.tr/css/style.css" media="screen">
+    <link rel="stylesheet" href="http://444.com.tr/css/normalize.css" media="screen">
+    <link rel="stylesheet" href="http://444.com.tr/css/font-awesome.min.css" media="screen">
+    <link rel="stylesheet" href="http://444.com.tr/css/media.css" media="screen">
+<!-- /style -->
+
+<!--[if IE]>
+    <style>section{overflow:hidden !important;}</style>
+<![endif]-->
+
+<style>
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+
+.text {
+    fill: none;
+    stroke-width: 6;
+    stroke-linejoin: round;
+    stroke-dasharray: 70 330;
+    stroke-dashoffset: 0;
+    -webkit-animation: stroke 6s infinite linear;
+    animation: stroke 6s infinite linear;
+}
+
+.text:nth-child(5n + 1) {
+    stroke: #F2385A;
+    -webkit-animation-delay: -1.2s;
+    animation-delay: -1.2s;
+}
+.text:nth-child(5n + 2) {
+    stroke: #F5A503;
+    -webkit-animation-delay: -2.4s;
+    animation-delay: -2.4s;
+}
+
+.text:nth-child(5n + 3) {
+    stroke: #E9F1DF;
+    -webkit-animation-delay: -3.6s;
+    animation-delay: -3.6s;
+}
+
+.text:nth-child(5n + 4) {
+    stroke: #56D9CD;
+    -webkit-animation-delay: -4.8s;
+    animation-delay: -4.8s;
+}
+
+.text:nth-child(5n + 5) {
+    stroke: #3AA1BF;
+    -webkit-animation-delay: -6s;
+    animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke {
+    100% {
+    stroke-dashoffset: -400;
+    }
+}
+
+@keyframes stroke {
+    100% {
+    stroke-dashoffset: -400;
+    }
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #111;
+    background-size: .2em 100%;
+    font: 11.5em/1 Open Sans, Impact;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+</style>
+
 </head>
+
 <body>
 
-	<h1>congrats, you did it.
-you managed to make me really hate you :)
-Thanks for your attention, time. wish you happy always :) 
-regards. ACHMAD BENY CAHYONO </h2>
-   <script>var rnd = Math.random, flr = Math.floor;
-   let canvas = document.createElement('canvas');
-   
-   document.getElementsByTagName('body')[0].appendChild(canvas);
-   canvas.style.position = 'absolute';
-   canvas.style.width = '100%';
-   canvas.style.height = '100%';
-   
-   canvas.width = canvas.clientWidth;
-   canvas.height = canvas.clientHeight;
-   
-   let ctx = canvas.getContext('2d');
-   
-   function rndNum(num) {
-   return rnd() * num + 1;
-   }
-   
-   function vector(x, y) {
-   this.x = x;
-   this.y = y;
-   
-   this.add = function(vec2) {
-   this.x = this.x + vec2.x;
-   this.y = this.y + vec2.y;
-   }
-   }
-   
-   function particle(pos, vel) {
-   this.pos = new vector(pos.x, pos.y);
-   this.vel = vel;
-   this.finish = false;
-   this.start = 0;
-   
-   this.update = function(time) {
-   let timeSpan = time - this.start;
-   
-   if (timeSpan > 500) {
-   this.finish = true;
-   }
-   
-   if (!this.finish) {
-   this.pos.add(this.vel);
-   this.vel.y = this.vel.y + gravity;
-   }
-   };
-   
-   this.draw = function() {
-   if (!this.finish) {
-   drawDot(this.pos.x, this.pos.y, 1);
-   }
-   }
-   
-   }
-   
-   function firework(x, y) {
-   this.pos = new vector(x, y);
-   this.vel = new vector(0, -rndNum(10) - 3);
-   this.color = 'hsl(' + rndNum(360) + ', 100%, 50%)'
-   this.size = 4;
-   this.finish = false;
-   this.start = 0;
-   let exParticles = [], exPLen = 100;
-   
-   let rootShow = true;
-   
-   this.update = function(time) {
-   if (this.finish) {
-   return;
-   }
-   
-   rootShow = this.vel.y < 0;
-   
-   if (rootShow) {
-   this.pos.add(this.vel);
-   this.vel.y = this.vel.y + gravity;
-   } else {
-   if (exParticles.length === 0) {
-   flash = true;
-   for (let i = 0; i < exPLen; i++) {
-   exParticles.push(new particle(this.pos, new vector(-rndNum(10) + 5, -rndNum(10) + 5)));
-   exParticles[exParticles.length - 1].start = time;
-   }
-   }
-   let countFinish = 0;
-   for (let i = 0; i < exPLen; i++) {
-   let p = exParticles[i];
-   p.update(time);
-   if (p.finish) {
-   countFinish++;
-   }
-   }
-   
-   if (countFinish === exPLen) {
-   this.finish = true;
-   }
-   
-   }
-   }
-   
-   this.draw = function() {
-   if (this.finish) {
-   return;
-   }
-   
-   ctx.fillStyle = this.color;
-   if (rootShow) {
-   drawDot(this.pos.x, this.pos.y, this.size);
-   } else {
-   for (let i = 0; i < exPLen; i++) {
-   let p = exParticles[i];
-   p.draw();
-   }
-   }
-   }
-   
-   }
-   
-   function drawDot(x, y, size) {
-   ctx.beginPath();
-   
-   ctx.arc(x, y, size, 0, Math.PI * 2);
-   ctx.fill();
-   
-   ctx.closePath();
-   }
-   
-   var fireworks = [],
-   gravity = 0.2,
-   snapTime = 0,
-   flash = false;
-   
-   function init() {
-   let numOfFireworks = 20;
-   for (let i = 0; i < numOfFireworks; i++) {
-   fireworks.push(new firework(rndNum(canvas.width), canvas.height));
-   }
-   }
-   
-   function update(time) {
-   for (let i = 0, len = fireworks.length; i < len; i++) {
-   let p = fireworks[i];
-   p.update(time);
-   }
-   }
-   
-   function draw(time) {
-   update(time);
-   
-   ctx.fillStyle = 'rgba(0,0,0,0.3)';
-   if (flash) {
-   flash = false;
-   }
-   ctx.fillRect(0, 0, canvas.width, canvas.height);
-   
-   ctx.fillStyle = 'white';
-   ctx.font = "30px Segoe UI";
-   let newTime = time - snapTime;
-   snapTime = time;
-   
-   ctx.fillStyle = 'blue';
-   for (let i = 0, len = fireworks.length; i < len; i++) {
-   let p = fireworks[i];
-   if (p.finish) {
-   fireworks[i] = new firework(rndNum(canvas.width), canvas.height);
-   p = fireworks[i];
-   p.start = time;
-   }
-   p.draw();
-   }
-   
-   window.requestAnimationFrame(draw);
-   }
-   
-   window.addEventListener('resize', function() {
-   canvas.width = canvas.clientWidth;
-   canvas.height = canvas.clientHeight;
-   });
-   
-   init();
-   draw();
-   </script>
+<style type="text/css" media="screen"> body { background: url(http://2.bp.blogspot.com/-PeHFnI94a_8/UwCPj-JFQzI/AAAAAAAAAMU/ALCzlsv3-1k/s1600/bg-body.jpg) } </style>
 
-</body>
+<!--<script> window.onclick=function(){window.open('https://www.facebook.com/farras.indyawan')} </script> -->
+
+<!-- PRELOADER -->
+    <div id="preloader">
+    <div class="loading">
+        <div class="loader"></div>
+    </div>
+    </div>
+<!-- /PRELOADER -->
+
+<!-- HOME SCREEN -->
+    <div id="star" class="video mask overlay"><canvas class="cover"></canvas></div>
+
+<svg viewBox="0 0 1000 300">
+    <symbol id="s-text">
+    <text text-anchor="middle" x="50%" y="50%" dy=".35em">RAs_617</text>
+    </symbol>
+    <use xlink:href="#s-text" class="text"></use>
+    <use xlink:href="#s-text" class="text"></use>
+    <use xlink:href="#s-text" class="text"></use>
+    <use xlink:href="#s-text" class="text"></use>
+    <use xlink:href="#s-text" class="text"></use>
+</svg>
+
+<!-- /HOME SCREEN -->
+
+    <script src="http://444.com.tr/js/jquery.js"></script>
+    <script src="http://444.com.tr/js/bootstrap.min.js"></script> 
+    <script src="http://444.com.tr/js/modernizr.custom.js"></script>
+    <script src="http://444.com.tr/js/plugins.min.js"></script>
+    <script src="http://444.com.tr/js/main.js"></script>
+
+<script type="text/javascript">
+    var adfly_id = 12798029;
+    var popunder = true;
+</script><script src="https://cdn.adf.ly/js/display.js"></script>
+
+
+<!-- FOOTER -->
+<footer id="ftr" style="position:fixed; left:0px; right:0px; bottom:3px; background:transparent); text-align:center;"><font face="Courier New" size="2">
+<center><font color="#00FFFF"> i miss u </font><marquee direction="up" scrollamount="2" height="15" width="250" onmouseover="this.stop()" onmouseout="this.start()"><font color="#1E90FF"><center>
+<br><br>Bebee hehe
+
+</center></marquee><font color="#87CEFA"> | <font color="#00FFFF">Copyright &copy; <script type="text/javascript">var creditsyear = new Date();document.write(creditsyear.getFullYear());</script> - Powered by <a href="" target="_blank" style="text-decoration:none"><font color="#1E90FF">RAs_617</font></a><font color="#87CEFA"> | <font color="#00FFFF">Indonesian People</footer>
+<!-- /FOOTER -->
+
+</body><body oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'></body>
+
 </html>
-
-<html>
-	<head>
-		<body>
-
-			<body bgcolor="black"><center><br>
-			<font face="Abel" size="6px" color="grey"><b></b>
-			<br><font size="9px">
-			<font color="white">[ </font><marquee scrollamount="3" width="630" height="70" behavior="alternate">congrats :))) 💔💔💔</marquee><font color="white"> ]</font>
-			<br><br><font size="3px" face="Ubuntu Condensed">
-		</body>
-	</font>
